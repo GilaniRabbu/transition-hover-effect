@@ -1,0 +1,76 @@
+body {
+    background: #FAFAFA;
+}
+
+.title {
+    height: 20vh;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* Gradient text */
+    background-image: linear-gradient(to right, #E61950, #EE006B, #F10088, #EE14A6, #E430C6, #D142D5, #BA50E2, #A05CED, #8261E7, #6364DF, #4465D5, #1E64C8);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.container {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 1rem;
+}
+
+.img-container {
+    border: 10px solid #36454F;
+    height: 250px;
+    width: 250px;
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+.img-container img {
+    width: 100%;
+    height: 100%;
+}
+
+.transition {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.transition:hover {
+    opacity: 1;
+}
+
+.fade::after {
+    content: 'The Forest';
+    font-size: 2rem;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: black;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.fade-text::after {
+    content: 'The House';
+}
+
+.fade:hover::after,
+.fade-text:hover::after {
+    opacity: 0.8;
+}
